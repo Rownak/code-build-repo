@@ -15,6 +15,7 @@ phases:
             - printenv
             - echo "Start the installation process"
             - echo "Installation Process Completed"
+            - echo "Welcome to AWS $name$"
     pre_build:
         commands: 
             - echo "This is the start of Pre-Build phase"
