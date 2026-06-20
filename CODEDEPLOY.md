@@ -30,3 +30,12 @@ aws s3api put-bucket-versioning --bucket aws-devops-manifold --versioning-config
 ```
 aws deploy push --application-name MyDeployDemo --s3-location s3://aws-devops-manifold/MyDeployDemo-test/app.zip --ignore-hidden-files --region ap-south-1 --profile murthy
 ```
+
+# CodeBuild Automation Test
+
+Option A: Use the GitHub Quick Start in EventBridge (Easiest)
+AWS provides a native inbound partner integration that automatically provisions an endpoint for GitHub without needing API Destinations.
+1. In the EventBridge Console, go to Buses > Partner event sources.
+2. Click Set up and look for GitHub in the partner list.
+3. Follow the prompt to log into GitHub and authorize the AWS Integration App.
+4. AWS will automatically generate a Partner Event Source ARN and handle the underlying URL infrastructure. You won't have to manually paste a URL into GitHub; the GitHub App handles the handshake directly.
